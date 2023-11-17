@@ -10,7 +10,7 @@ namespace Conditions__Tasks__Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Conditions Tasks");
+            Console.WriteLine("Approved Conditions Tasks");
 
             Console.WriteLine("C. Task no 1");
             //Napisz program, który stworzy dwie zmienne int i sprawdzi czy są one równe czy nie.
@@ -124,6 +124,7 @@ namespace Conditions__Tasks__Test
             //Dane testowe: 140. Rezultat: Jesteś krasnoludem.
 
             //& - oba warunki do sprawdzenia
+
             Console.WriteLine("Podaj swój wzrost");
             string userInput = Console.ReadLine();
             if (double.TryParse(userInput, out double userHeight))
