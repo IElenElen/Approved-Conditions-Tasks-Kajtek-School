@@ -31,6 +31,7 @@ namespace Conditions__Tasks__Test
             //Napisz program, który sprawdzi czy podana przez użytkownika liczba jest parzysta czy nieparzysta.
             //Dane testowe: 15
             //Rezultat: 15 jest liczbą nieparzystą.
+
             int number1 = 15;
             if (number1 % 2 == 0)
             {
@@ -45,8 +46,6 @@ namespace Conditions__Tasks__Test
             //Napisz program, który sprawdzi czy podana przez użytkownika liczba jest dodatnia czy ujemna.
             //Dane testowe: 14. Rezultat w terminalu: 14 jest liczbą dodatnią.
 
-            //Drugie podjeście do zad nr 3
-            //dla zera zrobić, bo jest neutralne
             Console.WriteLine("Podaj liczbę: ");
             string noUserInput = Console.ReadLine();
             int noFromUser;
@@ -68,18 +67,10 @@ namespace Conditions__Tasks__Test
                 Console.WriteLine("Błąd. Wprowadź liczbę");
             }
 
-            //Pierwsze podjeście
-            int no14 = 14;
-            string effect;
-            effect = (no14 > 0) ? $"{no14} jest liczbą dodatnią" : $"{no14} jest liczbą ujemną";
-            Console.WriteLine(effect);
-
             Console.WriteLine("C. Task no 4");
             //Napisz program, który sprawdzi czy podany przez użytkownika rok jest rokiem przestępnym.
             //Dane: 2016. Rezultat w terminalu: 2016 jest rokiem przestepnym.
-            //więcej warunków dla roku przestepnego poszukać i to rozwinąć....
 
-            //Drugie podjeście do zad nr 4
             Console.WriteLine("Podaj rok: ");
             string yearInput = Console.ReadLine();
             int year;
@@ -101,24 +92,11 @@ namespace Conditions__Tasks__Test
                 Console.WriteLine($"{year} nie jest rokiem przestępnym");
             }
 
-            //Pierwsze podjeście
-            int yearno = 2016;
-            if (yearno % 4 == 0)
-            {
-                Console.WriteLine($"{yearno} jest rokiem przestępnym");
-            }
-            else
-            {
-                Console.WriteLine($"{yearno} nie jest rokiem przestępnym");
-            }
-
             Console.WriteLine("C. Task no 5");
             //Napisz program, który sprawdzi czy podany przez użytkownika wiek uprawnia go do ubiegania się
             //o stanowisko posła, premiera, senatora, prezydenta.
             //Dane testowe: 21. Rezultat: Możesz zostać posłem.
-            //ustawić taki wiek, aby od razu sprawdzić wszystko - czyli jeden wiek ustawić
 
-            //Drugie podejście do zad nr 5
             Console.WriteLine("Podaj swój wiek");
             string ageInput = Console.ReadLine();
             int age;
@@ -141,41 +119,10 @@ namespace Conditions__Tasks__Test
                 Console.WriteLine("Błąd. Wprowadź poprawne dane");
             }
 
-            //Pierwsze podejście
-            int age1 = 21;
-            if (age1 >= 21)
-            {
-                Console.WriteLine("Możesz zostać posłem");
-            }
-            else
-            {
-                Console.WriteLine("Błąd. Wprowadź poprawne dane");
-            }
-            int age2 = 30;
-            if (age2 >= 30)
-            {
-                Console.WriteLine("Możesz zostać senatorem");
-            }
-            else
-            {
-                Console.WriteLine("Błąd. Wprowadź poprawne dane");
-            }
-            int age3 = 35;
-            if (age3 >= 35)
-            {
-                Console.WriteLine("Możesz zostać prezydentem");
-            }
-            else
-            {
-                Console.WriteLine("Błąd. Wprowadź poprawne dane");
-            }
-
             Console.WriteLine("C. Task no 6");
             //Napisz program, który pobierze wzrost użytkownika i przypisze mu wymyśloną kategorię wzrostu.
             //Dane testowe: 140. Rezultat: Jesteś krasnoludem.
-            //więcej możliwości dopisać
 
-            //Drugie podjeście do zad nr 6 - rozbudowanie opcji
             //& - oba warunki do sprawdzenia
             Console.WriteLine("Podaj swój wzrost");
             string userInput = Console.ReadLine();
@@ -224,8 +171,8 @@ namespace Conditions__Tasks__Test
             //Dane: 25, 63, 79. Rezultat: 79 jest największa z podanych.
             //która liczba jest największa a nie tylko, że no3 np. największta to 79
 
-            //Drugie podjeście do zad nr 7
             //skracam sprawdzanie prawdziwości - &&
+
             Console.WriteLine("Podaj pierwszą liczbę: ");
             string no1Input = Console.ReadLine();
             Console.WriteLine("Podaj drugą liczbę: ");
@@ -256,19 +203,6 @@ namespace Conditions__Tasks__Test
             {
                 Console.WriteLine("Bląd. Wprowadź poprawne liczby");
             }
-         
-            //Pierwsze podejście
-            int no1 = 25;
-            int no2 = 63;
-            int no3 = 79;
-            if (no1 < no2 & no2 < no3)
-            {
-                Console.WriteLine($"{no3} jest największą z podanych liczb");
-            }
-            else
-            {
-                Console.WriteLine($"{no3} nie jest największą z podanych liczb");
-            }
 
             Console.WriteLine("C. Task no 8");
             //Napisz program, który sprawdzi, czy kandydat może ubiegać się o miejsce na studiach wg. kryteriow:
@@ -279,13 +213,8 @@ namespace Conditions__Tasks__Test
             //Dane testowe: matma: 80, fizyka: 71, chemia 0
             //Rezultat: kandydat dopuszczony do rekrutacji
 
-            //do poprawy:
-            //te 4 pierwsze warunki muszą być spełnione równocześnie, kandydat musi mieć 180 punktów
-            //i te minimalne wyniki każdej matury też
-            //albo po prostu matma i jakiś przedmiot w sumie ponad 150
-
-            //Drugie podejście do zad nr 8
             //& wszystkie  warunki do sprawdzenia
+
             int resultNewMath = 80;
             int resultNewPhysics = 71;
             int resultNewChemistry = 0;
@@ -299,19 +228,6 @@ namespace Conditions__Tasks__Test
                 Console.WriteLine("Kandydat niedopuszczony do rekrutacji");
                 }
 
-            //Pierwsze podejście
-            int resultMath = 80;
-            int resultPhysics = 71;
-            int resultChemistry = 0;
-            if ((resultMath + resultPhysics + resultChemistry > 180) || (resultMath + resultPhysics > 150) || (resultMath + resultChemistry > 150))
-            {
-                Console.WriteLine("Kandydat dopuszczony do rekrutacji");
-            }
-            else
-            {
-                Console.WriteLine("Kandydat niedopuszczony do rekrutacji");
-            }
-
             Console.WriteLine("C. Task no 9");
             //&& dobrze zastosowane
             //Napisz program, który odczyta temperaturę i zwróci nazwę jak w poniższych kryteriach.
@@ -320,14 +236,8 @@ namespace Conditions__Tasks__Test
             //temp >=40 a weź wyprowadzam się na Alaskę
             //Dane testowe: 41 Rezultat: jadę na Alaskę
 
-            //tylko w przejściu przez 10 masz dobrze, bo najpierw masz <= a potem >, czyli cały zakres jest pokryty
-            //ale we wszystkich pozostałych granicach z obu stron sprawdzasz większy lub mniejszy, a nigdy równy
-            //więc 0, 20, 30 to u Ciebie błędne temperatury
-            //bo 40 jeszcze dobrze sprawdzasz, bo jest większe lub równe
-            //błędnie zrozumiałam zakresy 
             //tu &, bo każdy warunek chcę sprawdzić
 
-            //Drugie podejście do zad nr 9
             int temperatureInput = 41;
             if (temperatureInput < 0)
             {
@@ -358,41 +268,12 @@ namespace Conditions__Tasks__Test
                 Console.WriteLine("Błędna temperatura");
             }
 
-            //Pierwsze podejście zad nr 9
-            int temperature = 41;
-            if (temperature < 0)
-            {
-                Console.WriteLine("Cholernie piździ");
-            }
-            else if ((temperature > 0) && (temperature <= 10))
-            {
-                Console.WriteLine("Zimno");
-            }
-            else if ((temperature > 10) && (temperature < 20))
-            {
-                Console.WriteLine("Chłodno");
-            }
-            else if ((temperature > 20) && (temperature < 30))
-            {
-                Console.WriteLine("W sam raz");
-            }
-            else if ((temperature > 30) && (temperature < 40))
-            {
-                Console.WriteLine("Zaczyna być słabo, bo gorąco");
-            }
-            else if (temperature >= 40)
-            {
-                Console.WriteLine("A weź, przeprowadzam się na Alaskę");
-            }
-            else
-            {
-                Console.WriteLine("Błędna temperatura");
-            }
-
             Console.WriteLine("C. Task no 10");
             //Napisz program, który sprawdzi, czy z 3 podanych długości można stworzyć trojkąt.
             //Dane: 40, 55, 65. Rezultat: Można zbudować trójkąt.
+
             //tu skracam czyli &&, bo prawdziwość każdego etapu ważna
+
             int first = 40;
             int second = 55;
             int third = 65;
@@ -410,11 +291,6 @@ namespace Conditions__Tasks__Test
             //6 celujący, 5 bardzo dobry, 4 dobry, 3 dostateczny, 2 dopuszczający, 1 niedostateczny
             // Dane: 3 Rezultat: dostateczny
 
-            //w 11 zadaniu chyba coś zaczęłaś i nie dokończyłas, bo masz tylko jeden case i to jeszcze ze złym opisem tekstowym
-            //tak samo w zadaniu 12
-            //czy może nie rozumiesz jak działa switch i potrzebujesz, żeby Ci to lepiej wytłumaczyć ?
-
-            //Drugie podejście do zad nr 11
             int rating = 3;
             switch (rating)
             {
@@ -441,32 +317,12 @@ namespace Conditions__Tasks__Test
                     break;
             }
 
-            //Pierwsze podejście:
-            int rating1 = 6;
-            int rating2 = 5;
-            int rating3 = 4;
-            int rating4 = 3;
-            int rating5 = 2;
-            int rating6 = 1;
-
-            switch (rating4)
-            {
-                case 1:
-                    Console.WriteLine("dostateczny");
-                    break;
-                default:
-                    Console.WriteLine("Błędne dane");
-                    break;
-            }
-
             Console.WriteLine("C. Task no 12");
             //Napisz program, który pobierze numer dnia tygodnia i wyświetli jego nazwę.
             //Dane: 4 Rezultat: czwartek
-            //Tu też sugeruję się, że mam konkretny przypadek - tzn. wprowadzono już nr i oczekiwany jest opis
-            //Tu też kolejne podejście
 
-            //Drugie podejście zad nr 12
             //&& oba warunki, efektywność 
+
             Console.WriteLine("Podaj nr dnia: ");
             string dayNoInput = Console.ReadLine();
             int dayNo;
@@ -501,24 +357,6 @@ namespace Conditions__Tasks__Test
                 }
             }
 
-            //Pierwsze podejście
-            string dzień1 = "poniedziałek";
-            string dzień2 = "wtorek";
-            string dzień3 = "środa";
-            string dzień4 = "czwartek";
-            string dzień5 = "piątek";
-            string dzień6 = "sobota";
-            string dzień7 = "niedziela";
-
-            switch (dzień4)
-            {
-                case "czwartek":
-                    Console.WriteLine("czwartek");
-                    break;
-                default: Console.WriteLine("Błędne dane");
-                    break;
-            }
-
             Console.WriteLine("C. Task no 13");
             //Napisz program, który będzie posiadał menu wg wzoru poniżej i będzie prostym kalkulatorem
             //Podaj pierwszą liczbę ....
@@ -526,6 +364,7 @@ namespace Conditions__Tasks__Test
             //Podaj numer operacji do wykonania
             //1. Dodawania 2. Odejmowanie 3. Mnożenie 4. Dzielenie
             //Twój wynik to:
+
             Console.WriteLine("Podaj pierwszą liczbę");
             string firstInput = Console.ReadLine();
             int firstNo;
