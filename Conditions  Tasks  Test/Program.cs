@@ -47,7 +47,7 @@ namespace Conditions__Tasks__Test
             //Dane testowe: 14. Rezultat w terminalu: 14 jest liczbą dodatnią.
 
             Console.WriteLine("Podaj liczbę: ");
-            string noUserInput = Console.ReadLine();
+            string? noUserInput = Console.ReadLine();
             int noFromUser;
             int.TryParse(noUserInput, out noFromUser);
             if (noFromUser == 0)
@@ -72,7 +72,7 @@ namespace Conditions__Tasks__Test
             //Dane: 2016. Rezultat w terminalu: 2016 jest rokiem przestepnym.
 
             Console.WriteLine("Podaj rok: ");
-            string yearInput = Console.ReadLine();
+            string? yearInput = Console.ReadLine();
             int year;
             if (int.TryParse(yearInput, out year))
             {
@@ -98,7 +98,7 @@ namespace Conditions__Tasks__Test
             //Dane testowe: 21. Rezultat: Możesz zostać posłem.
 
             Console.WriteLine("Podaj swój wiek");
-            string ageInput = Console.ReadLine();
+            string? ageInput = Console.ReadLine();
             int age;
             if (int.TryParse(ageInput, out age))
             {
@@ -123,10 +123,10 @@ namespace Conditions__Tasks__Test
             //Napisz program, który pobierze wzrost użytkownika i przypisze mu wymyśloną kategorię wzrostu.
             //Dane testowe: 140. Rezultat: Jesteś krasnoludem.
 
-            //& - oba warunki do sprawdzenia
+            //&& - oba warunki do sprawdzenia
 
             Console.WriteLine("Podaj swój wzrost");
-            string userInput = Console.ReadLine();
+            string? userInput = Console.ReadLine();
             if (double.TryParse(userInput, out double userHeight))
             {
                 if (userHeight <= 0)
@@ -175,11 +175,11 @@ namespace Conditions__Tasks__Test
             //skracam sprawdzanie prawdziwości - &&
 
             Console.WriteLine("Podaj pierwszą liczbę: ");
-            string no1Input = Console.ReadLine();
+            string? no1Input = Console.ReadLine();
             Console.WriteLine("Podaj drugą liczbę: ");
-            string no2Input = Console.ReadLine();
+            string? no2Input = Console.ReadLine();
             Console.WriteLine("Podaj trzecią liczbę: ");
-            string no3Input = Console.ReadLine();
+            string? no3Input = Console.ReadLine();
             int no1out;
             int no2out;
             int no3out;
@@ -237,26 +237,26 @@ namespace Conditions__Tasks__Test
             //temp >=40 a weź wyprowadzam się na Alaskę
             //Dane testowe: 41 Rezultat: jadę na Alaskę
 
-            //tu &, bo każdy warunek chcę sprawdzić
+            //można użyć &&, szybsze
 
             int temperatureInput = 41;
             if (temperatureInput < 0)
             {
                 Console.WriteLine("Cholernie piździ");
             }
-            else if ((temperatureInput > 0) & (temperatureInput <= 10))
+            else if ((temperatureInput > 0) && (temperatureInput <= 10))
             {
                 Console.WriteLine("Zimno");
             }
-            else if ((temperatureInput > 10) & (temperatureInput <= 20))
+            else if ((temperatureInput > 10) && (temperatureInput <= 20))
             {
                 Console.WriteLine("Chłodno");
             }
-            else if ((temperatureInput > 20) & (temperatureInput <= 30))
+            else if ((temperatureInput > 20) && (temperatureInput <= 30))
             {
                 Console.WriteLine("W sam raz");
             }
-            else if ((temperatureInput > 30) & (temperatureInput <= 40))
+            else if ((temperatureInput > 30) && (temperatureInput <= 40))
             {
                 Console.WriteLine("Zaczyna być słabo, bo gorąco");
             }
@@ -325,7 +325,7 @@ namespace Conditions__Tasks__Test
             //&& oba warunki, efektywność 
 
             Console.WriteLine("Podaj nr dnia: ");
-            string dayNoInput = Console.ReadLine();
+            string? dayNoInput = Console.ReadLine();
             int dayNo;
             if (int.TryParse(dayNoInput, out dayNo) && (dayNo >= 1 && dayNo <= 7))
             {
@@ -367,7 +367,7 @@ namespace Conditions__Tasks__Test
             //Twój wynik to:
 
             Console.WriteLine("Podaj pierwszą liczbę");
-            string firstInput = Console.ReadLine();
+            string? firstInput = Console.ReadLine();
             int firstNo;
             if (int.TryParse(firstInput, out firstNo))
             {
@@ -378,7 +378,7 @@ namespace Conditions__Tasks__Test
                 Console.WriteLine("Błąd. Wprowadź pierwszą liczbę");
             }
             Console.WriteLine("Podaj drugą liczbę");
-            string secondInput = Console.ReadLine();
+            string? secondInput = Console.ReadLine();
             int secondNo;
             if (int.TryParse(secondInput, out secondNo))
             {
@@ -393,7 +393,7 @@ namespace Conditions__Tasks__Test
             Console.WriteLine("Operacja nr 2: odejmowanie");
             Console.WriteLine("Operacja nr 3: mnożenie");
             Console.WriteLine("Operacja nr 4: dzielenie");
-            string operationNo = Console.ReadLine();
+            string? operationNo = Console.ReadLine();
             int operation;
             if (int.TryParse(operationNo, out operation))
             {
